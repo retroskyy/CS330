@@ -1,0 +1,46 @@
+// Define a Person class
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+
+    toString() {
+        return `${this.name}, ${this.age} years old`;
+    }
+}
+
+// Define a Student class that inherits from Person
+class Student extends Person {
+    constructor(name, age, studentId) {
+        super(name, age);
+        this.studentId = studentId;
+    }
+
+    study() {
+        console.log(`${this.name} is studying. Student ID: ${this.studentId}`);
+    }
+
+    greet() {
+        super.greet();
+        console.log(`I am also a student with ID: ${this.studentId}`);
+    }
+}
+
+// Instantiate a Person object
+let person = new Person('Alice', 30);
+person.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+console.log(person.toString()); // Output: Alice, 30 years old
+
+// Instantiate a Student object
+let student = new Student('Bob', 20, 'S12345');
+student.greet(); // Output: Hello, my name is Bob and I am 20 years old. I am also a student with ID: S12345
+student.study(); // Output: Bob is studying. Student ID: S12345
+
+// Modify their variables
+student.name = 'Charlie';
+student.greet(); // Output: Hello, my name is Charlie and I am 20 years old. I am also a student with ID: S12345
