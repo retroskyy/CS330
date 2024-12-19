@@ -1,0 +1,194 @@
+Topic 3:  if/else, switch, logical operators [PLP 4]
+Control Statements in JavaScript
+One-condition if/else statement
+let x = true;
+if (x) {
+    console.log("x is true");
+} else {
+    console.log("x is false");
+}
+
+Multi-condition if/else statement
+let x = 5;
+let y = 8;
+if (x > 0 && y < 10) {
+    console.log("x is positive and y is less than 10");
+} else {
+    console.log("Either x is not positive or y is not less than 10");
+}
+
+if/elif/else statements
+let number = 10;
+if (number < 0) {
+    console.log("The number is negative");
+} else if (number === 0) {
+    console.log("The number is zero");
+} else {
+    console.log("The number is positive");
+}
+
+Short-circuit logic
+let a = false;
+let b = true;
+if (a || b) {
+    console.log("Short-circuit evaluation: b is evaluated because a is false");
+}
+
+let c = true;
+if (c && b) {
+    console.log("Short-circuit evaluation: b is evaluated because c is true");
+}
+
+Switch-case statement
+let fruit = "apple";
+switch (fruit) {
+    case "apple":
+        console.log("You selected apple");
+        break;
+    case "banana":
+        console.log("You selected banana");
+        break;
+    case "cherry":
+        console.log("You selected cherry");
+        break;
+    default:
+        console.log("Unknown fruit");
+}
+
+Questions and Answers
+What are the boolean values in JavaScript?
+
+ In JavaScript, the boolean values are true and false.
+
+
+What types of conditional statements are available in JavaScript?
+
+ JavaScript supports the following types of conditional statements:
+
+
+if/else
+if/else if/else
+switch
+JavaScript does not have an unless statement like Perl, but the same logic can be achieved using if statements with negation.
+
+
+How does JavaScript delimit code blocks under each condition in selection control statements?
+
+ JavaScript uses curly braces {} to delimit code blocks under each condition in selection control statements.
+
+ if (condition) {
+    // code block
+} else {
+    // code block
+}
+
+
+Does JavaScript use short-circuit evaluation?
+
+ Yes, JavaScript uses short-circuit evaluation. Here’s an example:
+
+ let x = false;
+let y = true;
+
+// Using OR operator
+if (x || y) {
+    console.log("Short-circuit: y is evaluated because x is false");
+}
+
+// Using AND operator
+if (y && x) {
+    // This code will not run because y is true but x is false
+}
+
+
+How does JavaScript deal with the “dangling else” problem?
+
+ JavaScript uses a pair of curly braces to define the scope of the if and else statements. This avoids ambiguity and resolves the dangling else problem.
+
+ if (condition1) {
+    if (condition2) {
+        // code block for condition2
+    }
+} else {
+    // code block for condition1's else
+}
+
+
+If your language supports switch or case statements, do you have to use “break” to get out of them? Can you use “continue” to have all of the conditions evaluated?
+
+ In JavaScript, you must use break to exit a case in a switch statement to prevent "fall-through" to subsequent cases. JavaScript does not support continue in switch statements, but you can omit the break statement to let the execution continue to the next case.
+
+ let fruit = "apple";
+switch (fruit) {
+    case "apple":
+        console.log("You selected apple");
+        // no break statement here, fall-through will occur
+    case "banana":
+        console.log("You selected banana");
+        break;
+    case "cherry":
+        console.log("You selected cherry");
+        break;
+    default:
+        console.log("Unknown fruit");
+}
+
+
+
+
+
+Example JavaScript File (control-statements.js)
+// One-condition if/else statement
+let x = true;
+if (x) {
+    console.log("x is true");
+} else {
+    console.log("x is false");
+}
+
+// Multi-condition if/else statement
+let x = 5;
+let y = 8;
+if (x > 0 && y < 10) {
+    console.log("x is positive and y is less than 10");
+} else {
+    console.log("Either x is not positive or y is not less than 10");
+}
+
+// if/elif/else statements
+let number = 10;
+if (number < 0) {
+    console.log("The number is negative");
+} else if (number === 0) {
+    console.log("The number is zero");
+} else {
+    console.log("The number is positive");
+}
+
+// Short-circuit logic
+let a = false;
+let b = true;
+if (a || b) {
+    console.log("Short-circuit evaluation: b is evaluated because a is false");
+}
+
+let c = true;
+if (c && b) {
+    console.log("Short-circuit evaluation: b is evaluated because c is true");
+}
+
+// Switch-case statement
+let fruit = "apple";
+switch (fruit) {
+    case "apple":
+        console.log("You selected apple");
+        break;
+    case "banana":
+        console.log("You selected banana");
+        break;
+    case "cherry":
+        console.log("You selected cherry");
+        break;
+    default:
+        console.log("Unknown fruit");
+}
