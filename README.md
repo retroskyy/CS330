@@ -1,24 +1,25 @@
 JAVASCRIPT FOR BEGINNERS 
 
-Topic 1: Data Types, and Naming Conventions in JavaScript [PLP 2]
+Topic 1: Data Types & Naming Conventions in JavaScript [PLP 2]
 
 Naming Conventions in JavaScript
   
   General Conventions:
-    Case Sensitivity: JavaScript variable names are case-sensitive.
-    Camel Case: Use camel case for mutable global variables (e.g., mutableGlobalVar) and uppercase for immutable global variables (e.g., IMMUTABLE_GLOBAL_VAR).
-    Start with a Letter: Variables must start with a letter, underscore (_), or dollar sign ($). They cannot start with numbers or other symbols.
+  - Case Sensitivity: JavaScript variable names are case-sensitive.
+  - Camel Case: Use camel case for mutable global variables (e.g., mutableGlobalVar) and uppercase for immutable global variables (e.g., IMMUTABLE_GLOBAL_VAR).
+  - Start with a Letter: Variables must start with a letter, underscore (_), or dollar sign ($). They cannot start with numbers or other symbols.
   
-  Examples
-    Correct: myVariable, _myVariable, $myVariable
-    Incorrect: 1myVariable, -myVariable
+  Examples:
+  - Correct: myVariable, _myVariable, $myVariable
+  - Incorrect: 1myVariable, -myVariable
 
 Usage of Camel Case
-  JavaScript programmers typically use camel case for variable names (e.g., lastName) instead of underscores (e.g., last_name).
+- JavaScript programmers typically use camel case for variable names (e.g., lastName) instead of underscores (e.g., last_name).
 
 Common Data Types in JavaScript
 
   Below is an example demonstrating variables of common data types in JavaScript, following the naming conventions.
+  
     let myInt = 22; // Integer
     let myString = "Hello, world!"; // String
     let myFloat = 2.09; // Floating-point number
@@ -27,30 +28,30 @@ Common Data Types in JavaScript
     let myDictionary = { key1: "value1", key2: "value2" }; // Dictionary (Object)
 
 Keywords and Reserved Words
-  JavaScript has keywords and reserved words that have special meanings and cannot be used as identifiers (variable names, function names, etc.).
+- JavaScript has keywords and reserved words that have special meanings and cannot be used as identifiers (variable names, function names, etc.).
   
 Keywords Examples
-  async
-  await
-  class
+- async
+- await
+- class
   
 Reserved Words Examples
-  if
-  else
-  for
-  function
-  var
-  let
-  const
+- if
+- else
+- for
+- function
+- var
+- let
+- const
   
 Variable Naming Requirements
-  Camel Case: Use camel case for variables (e.g., myVariable).
-  Descriptive Names: Variable names should be descriptive to indicate their content and usage.
-  Uppercase for Globals: Use uppercase for global constants (e.g., PI).
-  Prefixes for Booleans: Use prefixes like is or has for Boolean variables (e.g., isComplete).
+- Camel Case: Use camel case for variables (e.g., myVariable).
+- Descriptive Names: Variable names should be descriptive to indicate their content and usage.
+- Uppercase for Globals: Use uppercase for global constants (e.g., PI).
+- Prefixes for Booleans: Use prefixes like is or has for Boolean variables (e.g., isComplete).
 
 JavaScript: Statically or Dynamically Typed?
-  JavaScript is a dynamically typed language, meaning variable types are determined at     runtime, not during declaration. It is also weakly typed, allowing mixed type operations with type coercion.
+- JavaScript is a dynamically typed language, meaning variable types are determined at     runtime, not during declaration. It is also weakly typed, allowing mixed type operations with type coercion.
 
 Mutable and Immutable Variables
   In JavaScript, objects and arrays are mutable, whereas primitive values (like numbers and strings) are immutable.
@@ -80,6 +81,8 @@ Binding of Identifiers and Operators
 -----------------------------------------------------------------------
 Example Code
 Below is a piece of code demonstrating the discussed features:
+
+
 // Global Variable Example
 const PI = 3.14159; // Immutable Global Variable
 var mutableGlobalVar = "change"; // Mutable Global Variable
@@ -97,6 +100,7 @@ let mixedTypeResult = "5" + 6; // Results in the string "56"
 
 // Example of Type Coercion
 let coercedTypeResult = "5" * 6; // Results in the number 30
+
 ---------------------------------------------------------------------------------
 Illustrative Example
 If you include this line in a program and try to print x, what does it do?
